@@ -33,17 +33,17 @@ const Sidebar = ( {setActivePage,activePage}) => {
 
             {/*Navigation items */}
 
-            <ul className='nav nav-pills flex-clolumn mb-auto'>
+            <ul className='nav flex-clolumn mb-auto'>
                 <li className='nav-item w-100'>
                     <button onClick={() => setActivePage('dashboard')} className={`nav-link text-white w-100 text-start ${activePage === 'dashboard'?'active':''}`}><FaTachometerAlt className='me-2' />Dashboard </button>
                 </li>
-                <li className='w-100'><button onClick={() => setActivePage('chat')} className={`nav-link text-white w-100 text-start ${activePage === 'chat'?'active':''}`}><FaComments className='me-2' />Chat</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('employees')} className={`nav-link text-white w-100 text-start ${activePage === 'employees'?'active':''}`}><FaUsers className='me-2' />Employees</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('feed')} className={`nav-link text-white w-100 text-start ${activePage === 'feed'?'active':''}`}><FaRegThumbsUp className='me-2' />Feed</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('recogination')} className={`nav-link text-white w-100 text-start ${activePage === 'recogination'?'active':''}`}><FaRegThumbsUp className='me-2' />Recogination</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('event')} className={`nav-link text-white w-100 text-start ${activePage === 'event'?'active':''}`}><FaCalendarAlt className='me-2' />Event</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('profile')} className={`nav-link text-white w-100 text-start ${activePage === 'profile'?'active':''}`}><FaUserCircle className='me-2' />Profile</button></li>
-                <li className='w-100'><button onClick={() => setActivePage('settings')} className={`nav-link text-white w-100 text-start ${activePage === 'settings'?'active':''}`}><FaCog className='me-2' />Settings</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('chat')} className={`nav-link text-white w-100 text-start ${activePage === 'chat'?'active':''}`}><FaComments className='me-2' />Chat</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('employees')} className={`nav-link text-white w-100 text-start ${activePage === 'employees'?'active':''}`}><FaUsers className='me-2' />Employees</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('feed')} className={`nav-link text-white w-100 text-start ${activePage === 'feed'?'active':''}`}><FaRegThumbsUp className='me-2' />Feed</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('recogination')} className={`nav-link text-white w-100 text-start ${activePage === 'recogination'?'active':''}`}><FaRegThumbsUp className='me-2' />Recogination</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('event')} className={`nav-link text-white w-100 text-start ${activePage === 'event'?'active':''}`}><FaCalendarAlt className='me-2' />Event</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('profile')} className={`nav-link text-white w-100 text-start ${activePage === 'profile'?'active':''}`}><FaUserCircle className='me-2' />Profile</button></li>
+                <li className='w-100 mb-1'><button onClick={() => setActivePage('settings')} className={`nav-link text-white w-100 text-start ${activePage === 'settings'?'active':''}`}><FaCog className='me-2' />Settings</button></li>
             </ul>
         </div>
     );

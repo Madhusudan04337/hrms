@@ -33,12 +33,12 @@
 
 .side-navbar .nav-link{
     font-size: 16px;
-    padding: 18px;
-    transition: background 0.3s;
+    padding: 16px;
+    transition: background 0.1s;
 }
 
 .nav-link:hover,
 .nav-link.active{
-    background-color: #3b47a3;
+    background-color:#0401011f;
     border-radius: 8px;
 }
