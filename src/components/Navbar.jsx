@@ -3,9 +3,12 @@ import {FaTachometerAlt, FaComments, FaUsers,FaRegThumbsUp, FaCalendarAlt, FaUse
 import '../styles/Navbar.css';
 
 console.log("navbar loaded");
-const Sidebar = () => {
+const Sidebar = ( {setActivePage,activePage}) => {
     return (
         <div className="side-navbar d-flex flex-column flex-shrink-0 p-3">
+
+            {/*HRMS Logo */}
+
             <div className='logo-container text-center'>
                 <img 
                     src="/images/logo.png" 
@@ -13,6 +16,8 @@ const Sidebar = () => {
                     className='img-fluid logo-img'/>
             </div>
             
+            {/* Profile Info */}
+
             <div className="profile-container">
                 <div className='profile-img-container d-flex justify-content-center align-items-center me-3'>
                     <img 
@@ -25,15 +30,20 @@ const Sidebar = () => {
                     <small>HR Manager</small>
                 </div>
             </div>
+
+            {/*Navigation items */}
+
             <ul className='nav nav-pills flex-clolumn mb-auto'>
-                <li className='nav-item'><a href="#dashboard" className='nav-link text-white'><FaTachometerAlt className='me-2' />Dashboard</a></li>
-                <li><a href="#chat" className='nav-link text-white'><FaComments className='me-2' />Chat</a></li>
-                <li><a href="#employees" className='nav-link text-white'><FaUsers className='me-2' />Employees</a></li>
-                <li><a href="#feed" className='nav-link text-white'><FaRegThumbsUp className='me-2' />Feed</a></li>
-                <li><a href="#recognition" className='nav-link text-white'><FaRegThumbsUp className='me-2' />Recogination</a></li>
-                <li><a href="#event" className='nav-link text-white'><FaCalendarAlt className='me-2' />Event</a></li>
-                <li><a href="#profile" className='nav-link text-white'><FaUserCircle className='me-2' />Profile</a></li>
-                <li><a href="#settings" className='nav-link text-white'><FaCog className='me-2' />Settings</a></li>
+                <li className='nav-item w-100'>
+                    <button onClick={() => setActivePage('dashboard')} className={`nav-link text-white w-100 text-start ${activePage === 'dashboard'?'active':''}`}><FaTachometerAlt className='me-2' />Dashboard </button>
+                </li>
+                <li className='w-100'><button onClick={() => setActivePage('chat')} className={`nav-link text-white w-100 text-start ${activePage === 'chat'?'active':''}`}><FaComments className='me-2' />Chat</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('employees')} className={`nav-link text-white w-100 text-start ${activePage === 'employees'?'active':''}`}><FaUsers className='me-2' />Employees</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('feed')} className={`nav-link text-white w-100 text-start ${activePage === 'feed'?'active':''}`}><FaRegThumbsUp className='me-2' />Feed</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('recogination')} className={`nav-link text-white w-100 text-start ${activePage === 'recogination'?'active':''}`}><FaRegThumbsUp className='me-2' />Recogination</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('event')} className={`nav-link text-white w-100 text-start ${activePage === 'event'?'active':''}`}><FaCalendarAlt className='me-2' />Event</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('profile')} className={`nav-link text-white w-100 text-start ${activePage === 'profile'?'active':''}`}><FaUserCircle className='me-2' />Profile</button></li>
+                <li className='w-100'><button onClick={() => setActivePage('settings')} className={`nav-link text-white w-100 text-start ${activePage === 'settings'?'active':''}`}><FaCog className='me-2' />Settings</button></li>
             </ul>
         </div>
     );
