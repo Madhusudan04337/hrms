@@ -33,7 +33,7 @@ const Sidebar = ( {setActivePage,activePage}) => {
 
             {/*Navigation items */}
 
-            <ul className='nav flex-clolumn mb-auto'>
+            <ul className='nav flex-column mb-auto'>
                 <li className='nav-item w-100'>
                     <button onClick={() => setActivePage('dashboard')} className={`nav-link text-white w-100 text-start ${activePage === 'dashboard'?'active':''}`}><FaTachometerAlt className='me-2' />Dashboard </button>
                 </li>
