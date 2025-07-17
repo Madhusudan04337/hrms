@@ -21,7 +21,7 @@ const Sidebar = ( {setActivePage,activePage}) => {
             <div className="profile-container">
                 <div className='profile-img-container d-flex justify-content-center align-items-center me-3'>
                     <img 
-                    src="/images/maria.png" 
+                    src="/images/maria.jpg" 
                     alt='Profile'
                     className='img-fluid profile-img'/>
                 </div>
