@@ -27,14 +27,27 @@
     font-size: small;
 }
 
-.side-navbar .nav-link{
-    font-size: 16px;
-    padding: 16px;
-    transition: background 0.1s;
+.side-navbar .nav-link {
+  font-size: 16px;
+  padding: 16px;
+  color: white;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 
+    background 0.4s ease-in-out,
+    transform 0.4s ease-in-out,
+    border-radius 0.4s ease-in-out;
 }
 
-.nav-link:hover,
-.nav-link.active{
+
+.nav-link:hover{
     background-color:#0401011f;
     border-radius: 8px;
 }
+.nav-link.active{
+    background-color: #ffffff;
+    color: #4c57c1 !important;
+    border-radius: 8px;
+    transform: translateX(10px);
+}
+

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import Dashboard from './components/dashboard';
 import Chat from './components/chat';
 import Feed from './components/feed';
@@ -30,12 +30,14 @@ function App() {
 
   return (
     <div className='d-flex'>
-      <Navbar activePage={activePage} setActivePage={setActivePage} />
-      <div className='main-content p-4' style={{ width: '100%' }}>
+      <Sidebar activePage={activePage} setActivePage={setActivePage} />
+      <div className="main-content p-4" style={{ width: '100%' }}>
         {renderPage()}
       </div>
     </div>
   );
+
+  
 }
 
 export default App;
