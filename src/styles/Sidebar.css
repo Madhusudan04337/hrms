@@ -1,6 +1,6 @@
 .side-navbar{
     width: 250px;
-    height: 100vh;
+    height: fit-content;
     background-color: #4c57c1;
 }
 
