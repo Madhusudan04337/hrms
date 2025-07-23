@@ -6,6 +6,7 @@ const styles = `
     width: 250px;
     min-height: 100vh;
     background-color: #4c57c1;
+    position:fixed;
 }
 
 .logo-img {
