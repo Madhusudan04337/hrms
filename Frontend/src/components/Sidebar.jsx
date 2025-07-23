@@ -1,10 +1,70 @@
 import React from 'react';
 import {FaTachometerAlt,FaChartBar,FaBookOpen, FaComments, FaUsers, FaCalendarAlt, FaUserCircle,FaCog} from 'react-icons/fa';
-import '../styles/Sidebar.css';
+
+const styles = `
+.side-navbar{
+    width: 250px;
+    min-height: 100vh;
+    background-color: #4c57c1;
+}
+
+.logo-img {
+    width: 180px;
+}
+
+.profile-container {
+    display: flex;
+    padding: 15px 20px;
+}
+
+.profile-img{
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+}
+
+.profile-info small{
+    color: aliceblue;
+    font-size: small;
+}
+
+.side-navbar .nav-link {
+  font-size: 16px;
+  padding: 16px;
+  color: white;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 
+    background 0.1s ease-in-out,
+    transform 0.4s ease-in-out,
+    border-radius 0.4s ease-in-out;
+}
+
+
+.nav-link:hover{
+    background-color:#0401011f;
+    border-radius: 8px;
+}
+.nav-link.active{
+    background-color: #ffffff;
+    color: #4c57c1 !important;
+    border-radius: 8px;
+    transform: translateX(10px);
+}
+`
+function InjectStyles({ css }) {
+  return <style>{css}</style>;
+}
 
 console.log("Sidebar loaded");
 const Sidebar = ( {setActivePage,activePage}) => {
     return (
+      <>
+      <InjectStyles css={styles} />
+
         <div className="side-navbar d-flex flex-column flex-shrink-0 p-3">
 
             {/*HRMS Logo */}
@@ -46,6 +106,7 @@ const Sidebar = ( {setActivePage,activePage}) => {
                 <li className='w-100 mb-1'><button onClick={() => setActivePage('settings')} className={`nav-link text-white w-100 text-start ${activePage === 'settings'?'active':''}`}><FaCog className='me-2' /><span className="nav-label">Settings</span></button></li>
             </ul>
         </div>
+        </>
     );
 };
 export default Sidebar;
